@@ -16,9 +16,6 @@ This is a simple student website built using React. The website displays informa
 - [Contributing](#contributing)
 - [License](#license)
 
-## Demo
-
-[Add a link to the live demo of your website if available.]
 
 ## Features
 
@@ -33,7 +30,7 @@ To run this project locally, follow these steps:
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/simple-student-website.git
+git clone https://github.com/kovendhan5/student-website.git
 cd simple-student-website
 ```
 
