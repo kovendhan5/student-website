@@ -30,7 +30,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/kovendhan5/student-website.git
-cd simple-student-website
+cd student-website
 ```
 
 ## Install the dependencies:
@@ -43,8 +43,8 @@ To start the development server, run:
 
 ```bash
 npm start
-//This will start the React app on http://localhost:3000.
 ```
+This will start the React app on http://localhost:3000.
 
 ## Docker
 Building the Docker Image
@@ -58,8 +58,9 @@ To run the Docker container, use the following command:
 
 ```bash
 docker run -p 80:80 student-website
-//This will start the website and make it accessible at http://localhost.
 ```
+This will start the website and make it accessible at http://localhost.
+
 
 ## Deployment on Google Cloud Platform (GCP)
 Prerequisites
