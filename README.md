@@ -4,7 +4,6 @@ This is a simple student website built using React. The website displays informa
 
 ## Table of Contents
 
-- [Demo](#demo)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
