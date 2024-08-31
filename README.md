@@ -1,70 +1,117 @@
-# Getting Started with Create React App
+# Simple Student Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple student website built using React. The website displays information about students in the IT department.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Demo](#demo)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Docker](#docker)
+  - [Building the Docker Image](#building-the-docker-image)
+  - [Running the Docker Container](#running-the-docker-container)
+- [Deployment](#deployment)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Add a link to the live demo of your website if available.]
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- Displays a list of students in the IT department.
+- Each student has their name and department information listed.
+- Responsive design that works across different devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+To run this project locally, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone the repository:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/yourusername/simple-student-website.git
+cd simple-student-website
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Install the dependencies:
 
-### `npm run eject`
+```bash
+npm install
+```
+Usage
+To start the development server, run:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+//This will start the React app on http://localhost:3000.
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Docker
+Building the Docker Image
+You can build a Docker image for this project using the following command:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+docker build -t student-website .
+```
+Running the Docker Container
+To run the Docker container, use the following command:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+docker run -p 80:80 student-website
+//This will start the website and make it accessible at http://localhost.
+```
 
-## Learn More
+## Deployment on Google Cloud Platform (GCP)
+Prerequisites
+Google Cloud Account: If you don’t have one, create a free tier account here.
+Google Cloud SDK: Install the Google Cloud SDK to interact with GCP services from your terminal.
+Docker: Ensure your project is containerized with Docker (you already have the Dockerfile set up).
+Steps to Deploy
+Login to Google Cloud: Open your terminal and log in to your Google Cloud account:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+gcloud auth login
+```
+Set your GCP Project: Choose the GCP project you want to deploy to. Replace your-project-id with your actual project ID:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+gcloud config set project your-project-id
+```
+Build the Docker Image: Build your Docker image locally:
 
-### Code Splitting
+```bash
+docker build -t gcr.io/your-project-id/student-website .
+```
+Push the Docker Image to Google Container Registry: Push the Docker image to Google Container Registry (GCR):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+docker push gcr.io/your-project-id/student-website
+```
+Deploy to Google Cloud Run: Deploy your Docker image to Cloud Run:
 
-### Analyzing the Bundle Size
+```bash
+gcloud run deploy student-website \
+--image gcr.io/your-project-id/student-website \
+--platform managed \
+--region us-central1 \
+--allow-unauthenticated
+```
+Choose the appropriate region (like us-central1).
+The --allow-unauthenticated flag makes the service publicly accessible.
+Access Your Deployed Website: After deployment, the terminal will provide you with a URL.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<a href=">You can access your React app by visiting that URL.</a>
 
-### Making a Progressive Web App
+## Technologies Used
+React
+HTML/CSS
+JavaScript
+Docker
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
