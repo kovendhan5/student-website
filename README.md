@@ -104,12 +104,10 @@ Choose the appropriate region (like us-central1).
 The --allow-unauthenticated flag makes the service publicly accessible.
 Access Your Deployed Website: After deployment, the terminal will provide you with a URL.
 
-<a href=">You can access your React app by visiting that URL.</a>
-
 ## Technologies Used
-React
-HTML/CSS
-JavaScript
+React<br>
+HTML/CSS<br>
+JavaScript<br>
 Docker
 
 
