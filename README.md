@@ -1,6 +1,6 @@
 # Simple Student Website
 
-This is a simple student website built using React. The website displays information about students in the IT department.
+This is a simple student website built using React. The website displays information about students in the IT department.  
 
 ## Table of Contents
 
