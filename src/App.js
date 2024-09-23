@@ -3,9 +3,9 @@ import './App.css';
 
 function App() {
   const [students, setStudents] = useState([
-    { id: 1, name: 'Kovendhan', department: 'IT' },
-    { id: 2, name: 'Surya', department: 'IT' },
-    { id: 3, name: 'Ranjith', department: 'IT' },
+    { id: 1, name: 'Kovendhan P', department: 'IT' },
+    { id: 2, name: 'Surya L', department: 'IT' },
+    { id: 3, name: 'Ranjith S', department: 'IT' },
   ]);
 
   return (
