@@ -6,6 +6,8 @@ function App() {
     { id: 1, name: 'Kovendhan P', department: 'IT' },
     { id: 2, name: 'Surya L', department: 'IT' },
     { id: 3, name: 'Ranjith S', department: 'IT' },
+    { id: 1, name: 'bejisto', department: 'IT' },
+    { id: 1, name: 'kamalesh', department: 'IT' },
   ]);
 
   return (
