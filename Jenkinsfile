@@ -8,35 +8,18 @@ pipeline {
         }
         stage('Build') {
             steps {
-                // Example: Build the project using a build tool
-                sh 'echo Building project...'
-                sh './build.sh' // Replace with your actual build command
+                bat 'build-command.bat' // Use a batch file or a Windows-compatible build command
             }
         }
         stage('Test') {
             steps {
-                // Example: Run unit tests
-                sh 'echo Running tests...'
-                sh './test.sh' // Replace with your actual test command
+                bat 'test-command.bat' // Replace with your test command
             }
         }
         stage('Deploy') {
             steps {
-                // Example: Deploy the application
-                sh 'echo Deploying application...'
-                sh './deploy.sh' // Replace with your actual deployment command
+                bat 'deploy-command.bat' // Replace with your deployment command
             }
-        }
-    }
-    post {
-        always {
-            echo 'Pipeline execution finished!'
-        }
-        success {
-            echo 'Pipeline succeeded!'
-        }
-        failure {
-            echo 'Pipeline failed!'
         }
     }
 }
